@@ -1,0 +1,9 @@
+{
+    "version":2,
+    "builds":[
+        {"src" : "objfinder.py", "use": "@vercel/python"}
+    ],
+    "routes":[
+        {"src" : "/(.*)", "dest":"objfinder.py"}
+    ]
+}
