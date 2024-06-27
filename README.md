@@ -2,6 +2,24 @@
 
 ## Life quality booster for vision impaired people.
 
+## How to Run the application
+
+Flask instructions:pip install flask
+
+Set the FLASK_APP environment variable to tell Flask where your application is:
+
+On Windows CMD:set FLASK_APP=objfinder.py
+
+On Windows PowerShell:$env:FLASK_APP="objfinder.py"
+
+On macOS and Linux:export FLASK_APP=objfinder.py
+
+Run the Flask application by using the following command: flask --app objfinder run
+
+This will start a development server, and you'll see output similar to the following:
+
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) The server will default to localhost on port 5000.
+
 ## Inspiration
 
 Over 2.2 billion people globally have vision impairments, spanning various ages and socio-economic groups. This creates a substantial market for assistive technologies and services, enhanced by rapid AI advancements. Addressing their needs not only taps into this market but also promotes social inclusion and improves quality of life. Inspired by this need, ThirdEye is developing an app using the multimodal Gemini API to help visually impaired individuals navigate safely and effectively, leveraging both visual and verbal AI capabilities.
