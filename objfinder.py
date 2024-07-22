@@ -1,12 +1,31 @@
+from flask import Flask, request, jsonify  # Import specific modules from Flask
+import tempfile  # Import the tempfile library for temporary file operations
+import utils  # Import the utils library (assuming it's a custom library)
+import flask  # Import the Flask library for web development
+import PIL.Image  # Import the PIL Image library for image processing
+import os  # Import the OS library for file operations
+import google.generativeai as genai
+
+
+# This code is creating a web application using the Flask framework that provides several endpoints for uploading and processing different types of files(images and audio).
+# Here's an overview of what the code is doing:
+# Importing necessary libraries and modules, including Google's Generative AI library, OS, PIL Image, Flask, and utils(a custom library).
+# Creating a Flask application instance.
+# Defining several routes for different URLs:
+# '/' (root): Renders an HTML template called 'SearchAssistant_style.html'.
+# '/SearchAssistant': Renders the same HTML template as the root URL.
+# '/WalkingAssistant': Renders an HTML template called 'WalkingAssistant_style.html'.
+# '/upload-image' (accepts POST requests): Uploads an image file and processes it using a utility function from (link unavailable)
+# '/upload-walking-image' (accepts POST requests): Uploads an image file and processes it using a utility function from (link unavailable)
+# '/upload-audio' (accepts POST requests): Uploads an audio file and returns a success message.
+# In the '/upload-image' and '/upload-walking-image' endpoints, the code checks if the file exists, saves it to the 'uploads' directory, opens it using PIL Image, processes it using a utility function, and returns a JSON response with the result.
+# In the '/upload-audio' endpoint, the code checks if the file exists, and if so, returns a JSON response with a success message.
+# Finally, the code runs the Flask application in debug mode if the script is executed directly.
+# Overall, this code is setting up a web application that allows users to upload and process different types of files, and provides various endpoints for these tasks.
+
+
 # Import the necessary libraries and modules
 # Import the Generative AI library from Google
-import google.generativeai as genai
-import os  # Import the OS library for file operations
-import PIL.Image  # Import the PIL Image library for image processing
-import flask  # Import the Flask library for web development
-import utils  # Import the utils library (assuming it's a custom library)
-import tempfile  # Import the tempfile library for temporary file operations
-from flask import Flask, request, jsonify  # Import specific modules from Flask
 
 # Create a Flask application instance
 # Create a Flask app instance with the current module name
