@@ -1,27 +1,46 @@
+<!-- Define the document type and language -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Walking Assistant</title>
-</head>
-<body>
+  <!-- Head section -->
+  <head>
+    <!-- Set the character encoding to UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Set the viewport settings for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the page -->
+    <title>Walking Assistant</title>
+  </head>
 
-<h1>Walking Assistant</h1>
+  <!-- Body section -->
+  <body>
+    <!-- Heading for the page -->
+    <h1>Walking Assistant</h1>
 
-<!-- Camera Section -->
-<video id="video" width="640" height="480" autoplay></video>
-<canvas id="canvas" width="640" height="480"></canvas>
+    <!-- Camera Section -->
+    <!-- Video element for camera feed -->
+    <video id="video" width="640" height="480" autoplay></video>
+    <!-- Canvas element for image processing -->
+    <canvas id="canvas" width="640" height="480"></canvas>
 
-<div>
-    <button id="start-auto-capture" onclick="startAutoCapture()">Start Auto Capture</button>
-    <button id="stop-auto-capture" onclick="stopAutoCapture()" disabled>Stop Auto Capture</button>
-</div>
+    <!-- Button section -->
+    <div>
+      <!-- Button to start auto capture -->
+      <button id="start-auto-capture" onclick="startAutoCapture()">
+        Start Auto Capture
+      </button>
+      <!-- Button to stop auto capture (disabled by default) -->
+      <button id="stop-auto-capture" onclick="stopAutoCapture()" disabled>
+        Stop Auto Capture
+      </button>
+    </div>
 
-<div id="auto-capture-response"></div>
+    <!-- Response section -->
+    <div id="auto-capture-response"></div>
 
-<!-- <script src="script.js"></script> -->
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-</body>
+    <!-- Script section -->
+    <!-- Link to external script file (commented out) -->
+    <!-- <script src="script.js"></script> -->
+    <!-- Link to external script file using Flask's url_for function -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
 </html>
